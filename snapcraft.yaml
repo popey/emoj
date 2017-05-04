@@ -1,7 +1,7 @@
 name: emoji
 version: '0.3.0'
 summary: emoji
-description: Find relevant emoji from text on the command line.
+description: Find relevant emoji from text on the command line
 
 grade: stable
 confinement: strict

@@ -1,0 +1,14 @@
+jobs:
+  build:
+    working_directory: ~/snapcraft
+    docker:
+     - image: buildpack-deps:xenial
+    steps:
+     - run:
+       command: |
+         apt install snapcraft
+         snapcraft
+     - deploy:
+       name: Push Master to Snap Store
+       command: |
+         snapcraft push *.snap --channel edge

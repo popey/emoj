@@ -12,7 +12,9 @@ jobs:
            apt install -y snapcraft
            pwd
            snapcraft
+     - store_artifacts:
+         path: *.snap
      - deploy:
          name: Push Master to Snap Store
          command: |
-           snapcraft push *.snap --channel edge
+           echo snapcraft push emoj_0.3.0_amd64.snap --channel edge

@@ -1,6 +1,6 @@
 jobs:
   build:
-    working_directory: ~/snapcraft
+    working_directory: ~/
     docker:
      - image: buildpack-deps:xenial
     steps:

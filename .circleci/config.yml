@@ -7,7 +7,7 @@ jobs:
      - run:
          command: |
            apt update
-           apt install snapcraft
+           apt install -y snapcraft
            snapcraft
      - deploy:
          name: Push Master to Snap Store

@@ -11,7 +11,7 @@ jobs:
            apt update
            apt install -y snapcraft
            snapcraft
-     - stage_artifacts:
+     - store_artifacts:
          path: ./*.snap
      - deploy:
          name: Push Master to Snap Store

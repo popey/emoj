@@ -1,6 +1,6 @@
 jobs:
   build:
-    working_directory: ~/
+    working_directory: ~/emoji
     docker:
      - image: buildpack-deps:xenial
     steps:
@@ -9,7 +9,7 @@ jobs:
            apt update
            apt install -y snapcraft
            pwd
-           ls
+           git status
            snapcraft
      - deploy:
          name: Push Master to Snap Store

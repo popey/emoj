@@ -9,7 +9,6 @@ jobs:
            apt update
            apt install -y snapcraft
            pwd
-           git status
            snapcraft
      - deploy:
          name: Push Master to Snap Store

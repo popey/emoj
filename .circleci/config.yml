@@ -8,10 +8,10 @@ jobs:
          command: |
            apt update
            apt install -y snapcraft
+           pwd
+           ls
            snapcraft
      - deploy:
          name: Push Master to Snap Store
          command: |
-           pwd
-           ls
            snapcraft push *.snap --channel edge

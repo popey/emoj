@@ -4,7 +4,6 @@ jobs:
     docker:
      - image: buildpack-deps:xenial
     steps:
-     - checkout
      - run:
          command: |
            apt update

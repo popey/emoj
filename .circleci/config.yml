@@ -5,16 +5,16 @@ jobs:
     docker:
      - image: buildpack-deps:xenial
     steps:
-     - checkout
-     - run:
-         command: |
-           apt update
-           apt install -y snapcraft
-           pwd
-           snapcraft
-     - store_artifacts:
-         path: *.snap
-     - deploy:
-         name: Push Master to Snap Store
-         command: |
-           echo snapcraft push emoj_0.3.0_amd64.snap --channel edge
+      - checkout
+      - run:
+        command: |
+          apt update
+          apt install -y snapcraft
+          pwd
+          snapcraft
+      - store_artifacts:
+        path: ./*.snap
+      - deploy:
+        name: Push Master to Snap Store
+          command: |
+            echo snapcraft push emoj_0.3.0_amd64.snap --channel edge

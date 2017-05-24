@@ -1,10 +1,11 @@
+version: 2
 jobs:
   build:
     working_directory: ~/emoji
     docker:
      - image: buildpack-deps:xenial
     steps:
-     - checkout:
+     - checkout
      - run:
          command: |
            apt update

@@ -13,4 +13,6 @@ jobs:
      - deploy:
          name: Push Master to Snap Store
          command: |
+           pwd
+           ls
            snapcraft push *.snap --channel edge

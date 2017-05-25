@@ -8,6 +8,8 @@ jobs:
      - checkout
      - run:
          command: |
+           dpkg -l linux-image*
+           uname -a
            apt update
            apt install -y snapd
            snap install snapcraft --edge --classic 

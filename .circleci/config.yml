@@ -11,8 +11,7 @@ jobs:
            uname -a
            cat /etc/os-release
            apt update
-           apt install -y snapd
-           snap install snapcraft --edge --classic 
+           apt install -y snapcraft
            snapcraft
      - store_artifacts:
          path: ./*.snap

@@ -9,6 +9,7 @@ jobs:
      - run:
          command: |
            apt update
+           apt install snapd
            snap install snapcraft --edge --classic 
            snapcraft
      - store_artifacts:

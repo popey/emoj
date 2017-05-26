@@ -7,15 +7,12 @@ jobs:
      - checkout
      - run:
          command: |
-           uname -a
-           cat /etc/os-release
            sudo apt update
            sudo apt install -y snapd
            sudo snap install snapcraft --edge --classic
            /snap/bin/snapcraft
-     - store_artifacts:
-         path: ~/emoji/emoji_0.3.0_amd64.snap
      - deploy:
          name: Push Master to Snap Store
          command: |
-           echo snapcraft push *.snap --channel edge
+           openssl aes-256-cbc -d -in .snapcraft/snapcraft.encrypted -out .snapcraft/snapcraft.cfg -k $KEY
+           /snap/bin/snapcraft push *.snap

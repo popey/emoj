@@ -15,4 +15,4 @@ jobs:
          name: Push Master to Snap Store
          command: |
            openssl aes-256-cbc -d -in .snapcraft/snapcraft.encrypted -out .snapcraft/snapcraft.cfg -k $KEY
-           /snap/bin/snapcraft push *.snap --channel edge
+           /snap/bin/snapcraft push *.snap

@@ -14,7 +14,7 @@ jobs:
            sudo snap install snapcraft --edge --classic
            /snap/bin/snapcraft
      - store_artifacts:
-         path: ~/emoji/*.snap
+         path: ~/emoji/emoji_0.3.0_amd64.snap
      - deploy:
          name: Push Master to Snap Store
          command: |
